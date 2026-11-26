@@ -6,6 +6,9 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Projects from './pages/projects'
 import Tasks from './pages/tasks'
+import Dashboard from './pages/dashboard'
+import Register from './pages/register'
+import Login from './pages/login'
 
 function App() {
   
@@ -14,9 +17,11 @@ function App() {
     
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<login/>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/tasks" element={<Tasks/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
     </BrowserRouter>
     
