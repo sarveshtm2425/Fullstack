@@ -1,17 +1,22 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { registerschema } from "../components/Formschema/registerschema";
 
 function register(){
     const navigate=useNavigate();
+    
     const {register, handleSubmit, formState:{errors}}=useForm({
             resolver: zodResolver(registerschema)
     })
     function onSubmit1(data){
         console.log(data)
         alert("register sucess")
-        navigate("/")
+        navigate("/",{state:data})
+    }
+    function Location(data){
+        console.log(data)
+
     }
     return(
         <form onSubmit={handleSubmit(onSubmit1)}>
