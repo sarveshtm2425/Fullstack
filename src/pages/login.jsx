@@ -34,7 +34,7 @@ function Login() {
       alert("Invalid Username")
     }
     else{
-      console.log("invalid password")
+      console.log("invalid password...")
       alert("Invalid password")
     }
   }
