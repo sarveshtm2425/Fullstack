@@ -22,7 +22,7 @@ function Login() {
   const handlesubmit = (event)=>{
     event.preventDefault();
     console.log("login page",formdata)
-    alert("Login sucessfull")
+    alert("Login sucessfull....")
     navigate("/dashboard",{
       state:formdata
     })
